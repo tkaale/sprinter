@@ -28,7 +28,9 @@ def result():
     else:
         return render_template('result.html')
 
-
+@app.route('/update')
+def update():
+    return render_template('update.html')
 
 
 

@@ -190,6 +190,24 @@ textarea {
     outline-color:#7C99AC;
 }
 
+select {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color:#7C99AC;
+    margin-top: 5px;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px;
+    background-color:#D3DEDC;
+    border: none;
+    outline-color:#7C99AC;
+}
+
+.select {
+    text-align: center;
+    margin-bottom:15px;
+}
 .pocket {
     display: flex;
     justify-content: center;
