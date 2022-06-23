@@ -18,27 +18,27 @@
         <h1>Super Sprinter 3000</h1>
         <h3>Add user story</h3>
         <div class="form">
-            <form action="/story" method="post">
+            <form action="{{ url_for('result') }}" method="post">
                 <div class="title">
                     <label for="story_title">story title:</label><br>
-                    <input id="story_title" type="text">
+                    <input id="story_title" required name="storytitle" type="text">
                 </div>
                 <div class="user_story">
                     <label for="main_story">user story:</label><br>
-                    <textarea id="main_story" cols="50" rows="6"></textarea>
+                    <textarea id="main_story" required name="mainstory" cols="50" rows="6"></textarea>
                 </div>
                 <div class="accept">
                     <label for="acceptance">acceptance critieria:</label><br>
-                    <textarea id="acceptance" cols="50" rows="6"></textarea>
+                    <textarea id="acceptance" required name="acceptance" cols="50" rows="6"></textarea>
                 </div>
                 <div class="pocket">
                     <div class="business">
                         <label for="value">business value:</label><br>
-                        <input id="value" type="number" min="100" max="1500" step="100">
+                        <input id="value" required name="value" type="number" min="100" max="1500" step="100">
                     </div>
                     <div class="est">
                         <label for="estimation">Estimation:</label><br>
-                        <input id="estimation" type="number" min="0.5" max="40" step="0.5">
+                        <input id="estimation" required name="estimation" type="number" min="0.5" max="40" step="0.5">
                     </div>
                 </div>
                 <div class="button"><button type="submit">add story</button></div>

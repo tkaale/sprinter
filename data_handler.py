@@ -12,7 +12,7 @@ def get_all_user_story(filename):
     return dict_list
 
 
-def write_user_story(user_list, filename):
+def write_user_story(filename, user_list):
     count = len(get_all_user_story(filename))
     user_list.insert(0, count + 1)
     with open(filename, "a", newline='') as csvfile:
@@ -20,7 +20,7 @@ def write_user_story(user_list, filename):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         to_write = dict(zip(DATA_HEADER, user_list))
         writer.writerow(to_write)
-    print(writer)
+
         
 def change_user_story(filename, user_list):
     dict_list = get_all_user_story(filename)
