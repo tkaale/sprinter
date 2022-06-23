@@ -17,7 +17,8 @@
     <div class="wrapper">
         <h1>Super Sprinter 3000</h1>
         <div class="add">
-            <button><a href="/add">Add new story</a></button>
+            <button><a href="/story">Add new story</a></button>
+            <p>To edit click on story title</p>
         </div>
         <table>
             <thead id="thead">
@@ -32,19 +33,19 @@
                 </tr>
             </thead>
             <tbody>
+                {% for line in user_stories %}
                 <tr>
-                    <td>1</td>
+                    <td>{{ line.id }}</td>
                     <td id="linetitle">
-                        <a href="/">List all User Stories</a>
+                        <a href="/story">{{ line.title }}</a>
                     </td>
-                    <td>As a User,I want to see all the previously saved User Stories,So that I get an overview of all
-                        requirements</td>
-                    <td>Given that there are any number ({0..n}) of saved User Stories,When I open the website (/),Then
-                        ensure I see a table with all the stored data</td>
-                    <td>1000 point</td>
-                    <td>2.5 h</td>
-                    <td>planning</td>
+                    <td>{{ line.user_story }}s</td>
+                    <td>{{ line.acceptance_criteria }}</td>
+                    <td>{{ line.business_value }}</td>
+                    <td>{{ line.estimation }}</td>
+                    <td>{{ line.status }}</td>
                 </tr>
+                {% endfor %}
             </tbody>
 
 

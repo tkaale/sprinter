@@ -32,12 +32,24 @@ body {
     margin: 25px;
 }
 
-.add {
+.wrapper h3 {
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    font-size: 25px;
+    color:#92A9BD;
+    margin: 25px;
+}
+
+.add, .button{
     text-align: center;
 }
 
-
-.add button {
+button {
+    font-family: 'Staatliches', cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#7C99AC;
+    font-size: 20px;
     box-sizing: border-box;
     margin: 10px;
     border-radius: 10px;
@@ -55,29 +67,51 @@ body {
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
 }
 
-.add button:disabled {
+button:disabled {
     pointer-events: none;
   }
   
-.add button:hover {
+button:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
   
-.add button:active {
+button:active {
     box-shadow: none;
     transform: translateY(0);
   }
-.add button a {
-    font-family: 'Staatliches', cursive;
-    text-decoration: none;
-    text-transform: uppercase;
-    color:#7C99AC;
-    font-size: 20px;
+
+.button button{
+    margin:20px;
+
 }
 
+p {
+    margin-top:20px;
+    color:#7C99AC;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+#linetitle a:hover {
+    text-decoration: underline;
+}
+
+
+#linetitle a{
+    font-family: 'Staatliches', cursive;
+    color:#92A9BD;
+}
+
+a:visited {
+    color: #7C99AC;
+    text-decoration: none;
+  }
 table {
-    margin: 40px auto;
+    margin: 25px auto;
     border-collapse: collapse;
     border-radius: 30px;
     overflow: hidden;
@@ -95,4 +129,63 @@ tbody{
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-weight: bold;
+}
+
+form {
+    display: block;
+    margin:0 auto;
+    background-color:#FFEFEF;
+    width: 75%;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.title, .user_story, .accept, .business, .est {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    letter-spacing: 3px;
+    color:#7C99AC;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color:#7C99AC;
+    margin-top: 5px;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px;
+    background-color:#D3DEDC;
+    border: none;
+    outline-color:#7C99AC;
+}
+
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color:#7C99AC;
+    margin-top: 5px;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 10px;
+    background-color:#D3DEDC;
+    border: none;
+    outline-color:#7C99AC;
+}
+
+.pocket {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.pocket div {
+    margin: 10px;
+    padding: 20px;
 }
