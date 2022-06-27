@@ -28,9 +28,15 @@ def result():
     else:
         return render_template('result.html')
 
-@app.route('/update')
-def update():
-    return render_template('update.html')
+@app.route('/update/<id_story>', methods = ['POST', 'GET'])
+def route_edit(id_story):
+    table = data_handler.get_all_user_story(FILE)
+    result = {}
+    if request.method == 'GET':
+        for line in table:
+            if line['id'] == id_story:
+                result = line
+        return render_template('update.html', result = result)
 
 
 
